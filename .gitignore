@@ -1,3 +1,6 @@
+# -----------------------------------------------------------------------------
+# LOGS & DIAGNOSTICS
+# -----------------------------------------------------------------------------
 # Logs
 logs
 *.log
@@ -7,18 +10,111 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
-node_modules
+# Diagnostic reports (https://nodejs.org/api/report.html)
+report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
+
+# Runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# -----------------------------------------------------------------------------
+# DEPENDENCIES, MODULES & CACHES
+# -----------------------------------------------------------------------------
+# Dependency directories
+node_modules/
+jspm_packages/
+bower_components
+web_modules/
+
+# Optional cache directories
+.npm
+.eslintcache
+.stylelintcache
+.node_repl_history
+.cache
+.parcel-cache
+.fusebox/
+.dynamodb/
+.firebase/
+
+# Compiled binary addons (https://nodejs.org/api/addons.html)
+build/Release
+
+# Yarn Integrity file
+.yarn-integrity
+
+# yarn v3
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions
+
+# -----------------------------------------------------------------------------
+# BUILD / OUTPUT DIRECTORIES
+# -----------------------------------------------------------------------------
 dist
 dist-ssr
 *.local
 
+# Output of 'npm pack'
+*.tgz
+
+# Coverage directories
+lib-cov
+coverage
+*.lcov
+.nyc_output
+.grunt
+
+# TypeScript cache
+*.tsbuildinfo
+
+# Build Frameworks Outputs
+.next
+out
+.nuxt
+.vuepress/dist
+.temp
+.cache
+.svelte-kit/
+**/.vitepress/dist
+**/.vitepress/cache
+.docusaurus
+.serverless/
+# Comment in the public line in if your project uses Gatsby and not Next.js
+# public
+
+# -----------------------------------------------------------------------------
+# EDITOR & OS FILES
+# -----------------------------------------------------------------------------
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
+.vscode-test
 .idea
+.tern-port
+
+# OS files
 .DS_Store
 *.suo
 *.ntvs*
 *.njsproj
 *.sln
 *.sw?
+
+# -----------------------------------------------------------------------------
+# ENVIRONMENT & CONFIG
+# -----------------------------------------------------------------------------
+# dotenv environment variable files
+.env
+.env.*
+!.env.example
+
+# Vite logs files
+vite.config.js.timestamp-*
+vite.config.ts.timestamp-*
