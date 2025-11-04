@@ -1,0 +1,71 @@
+/* Global.css — clean, universal version */
+
+:root {
+  --primary: #007bff;
+  --secondary: #00bcd4;
+  --text-dark: #2c3e50;
+  --text-light: #5a6c7d;
+  --background-light: #e3f2fd;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', Arial, sans-serif;
+  background: linear-gradient(135deg, var(--background-light) 0%, #bbdefb 100%);
+  color: var(--text-dark);
+  min-height: 100%;
+}
+
+.app, .app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.page-content {
+  flex: 1;
+  opacity: 0;
+  transition: opacity 0.4s ease-in-out;
+}
+
+.page-content.fade-in {
+  opacity: 1;
+}
+
+/* Common utility buttons — optional but handy */
+.btn-primary {
+  background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+  color: white;
+  border: none;
+  padding: 0.8rem 1.6rem;
+  border-radius: 30px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.btn-secondary {
+  background: white;
+  border: 2px solid var(--primary);
+  color: var(--primary);
+  padding: 0.8rem 1.6rem;
+  border-radius: 30px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-secondary:hover {
+  background: var(--primary);
+  color: white;
+}

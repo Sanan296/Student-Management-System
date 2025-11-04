@@ -1,0 +1,251 @@
+.cgpa-page {
+  max-width: 700px;
+  margin: 2rem auto;
+  background: white;
+  padding: 2rem 2.5rem;
+  border-radius: 20px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+}
+
+.cgpa-page h2 {
+  color: #007bff;
+  margin-bottom: 0.5rem;
+  font-size: 1.8rem;
+}
+
+.cgpa-page p {
+  color: #5a6c7d;
+  margin-bottom: 1.5rem;
+}
+
+.subjects-list {
+  margin-bottom: 1.5rem;
+}
+
+.subject-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+}
+
+.subject-row label {
+  font-weight: 600;
+  color: #333;
+  min-width: 90px;
+}
+
+.subject-row select {
+  padding: 0.6rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 0.95rem;
+  outline: none;
+  transition: border 0.2s ease;
+}
+
+.subject-row select:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 3px rgba(0, 123, 255, 0.4);
+}
+
+.remove-btn {
+  background: #f44336;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 0.4rem 0.9rem;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.remove-btn:hover {
+  background: #f71111;
+}
+
+/* Buttons below */
+.cgpa-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #007bff, #00bcd4);
+  color: white;
+  border: none;
+  border-radius: 25px;
+  padding: 0.7rem 1.6rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Result box */
+.cgpa-result {
+  margin-top: 2rem;
+  background: linear-gradient(135deg, #007bff, #00bcd4);
+  color: white;
+  padding: 1rem 2rem;
+  border-radius: 12px;
+  font-size: 1.4rem;
+  font-weight: 600;
+  display: inline-block;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+/* Existing styles remain same — just add this section at bottom */
+
+/* Red Reset Button */
+.btn-danger {
+  background: #f44336;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  padding: 0.7rem 1.6rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-danger:hover {
+  background: #f71111;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+.subject-row {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.subject-name-input {
+  flex: 1;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.subject-grade-select {
+  padding: 8px;
+  border-radius: 6px;
+}
+
+.remove-btn {
+  background-color: #ff5c5c;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 6px 10px;
+  cursor: pointer;
+}
+
+.remove-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-right: 5px;
+}
+
+.btn-danger {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.cgpa-result {
+  margin-top: 20px;
+  font-weight: bold;
+  color: #007bff;
+}
+.subject-row {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.subject-input,
+.credit-input,
+.subject-select {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.subject-input {
+  flex: 1.5;
+}
+
+.subject-select {
+  flex: 1;
+}
+
+.credit-input {
+  width: 100px;
+}
+
+.remove-btn {
+  background-color: #ed7a7a;
+  color: white;
+  border: none;
+  padding: 8px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.remove-btn:hover{
+  background-color: #f71111;
+}
+
+.remove-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-right: 5px;
+}
+
+.btn-danger {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 6px;
+  cursor: pointer;
+  
+}
+
+.cgpa-result {
+  margin-top: 20px;
+  font-weight: bold;
+  color: whitesmoke;
+}
