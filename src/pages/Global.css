@@ -1,6 +1,5 @@
-/* Global.css — clean, universal version */
-
-:root {
+:root
+ {
   --primary: #007bff;
   --secondary: #00bcd4;
   --text-dark: #2c3e50;
@@ -8,13 +7,14 @@
   --background-light: #e3f2fd;
 }
 
-* {
+*{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-body {
+body
+{
   font-family: 'Poppins', Arial, sans-serif;
   background: linear-gradient(135deg, var(--background-light) 0%, #bbdefb 100%);
   color: var(--text-dark);
@@ -38,7 +38,8 @@ body {
 }
 
 /* Common utility buttons — optional but handy */
-.btn-primary {
+.btn-primary 
+{
   background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
   color: white;
   border: none;
@@ -68,4 +69,21 @@ body {
 .btn-secondary:hover {
   background: var(--primary);
   color: white;
+}
+body.dark-mode {
+ --primary: #79a6fe;
+ --secondary: #4dd0e1;
+ --text-dark: #ffffff;
+ --text-light: #bdbdbd;
+ --background-light: #1f2a38;
+ /* --component-bg: #2c3e50; 
+--component-border: #445464;  */
+--component-bg: #34495e; 
+--component-border: #445464;
+}
+
+body.dark-mode
+{
+background: linear-gradient(135deg, var(--background-light) 0%, #171f29 100%);
+color: var(--text-dark);
 }

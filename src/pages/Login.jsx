@@ -2,13 +2,11 @@ import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import "./auth.css";
 
-// Define the API Base URL
 const API_BASE_URL = "http://localhost:5000/api"; 
-// Key used for storing the token locally
-const AUTH_TOKEN_KEY = "adminToken"; // Key for the JWT
-const LOGIN_FLAG_KEY = "isLoggedIn"; // Key App.js is checking!
+const AUTH_TOKEN_KEY = "adminToken"; 
+const LOGIN_FLAG_KEY = "isLoggedIn"; 
 
-const Login = () => { // ⚠️ Removed setIsLoggedIn prop
+const Login = () => { 
     const navigate = useNavigate();
     const [formData, setFormData] = useState({
         email: "",
@@ -21,7 +19,6 @@ const Login = () => { // ⚠️ Removed setIsLoggedIn prop
         setFormData({ ...formData, [e.target.name]: e.target.value });
     };
 
-    // 🔄 API-Integrated handleLogin
     const handleLogin = async (e) => {
         e.preventDefault();
         setError(null);
@@ -46,19 +43,13 @@ const Login = () => { // ⚠️ Removed setIsLoggedIn prop
             const token = result.token || result.accessToken || result.jwt; 
             
             if (token) {
-                // SUCCESS: Store the JWT token
                 localStorage.setItem(AUTH_TOKEN_KEY, token);
-                
-                // 🚀 CRITICAL FIX: Set the isLoggedIn flag for App.js
                 localStorage.setItem(LOGIN_FLAG_KEY, "true"); 
-                
-                // Navigate will now work because App.js will see the flag set
-                navigate("/home"); 
-                
-            } else {
+                navigate("/home");     
+            } else 
+                {
                 throw new Error("Login failed: Server response was missing the token.");
-            }
-
+                }
         } catch (err) {
             setError(err.message);
             console.error("Login error:", err);
@@ -70,14 +61,12 @@ const Login = () => { // ⚠️ Removed setIsLoggedIn prop
     return (
         <div className="auth-container">
             <div className="auth-card">
-                {/* ... (rest of the component remains the same) ... */}
                 <div className="auth-header">
                     <h1>Admin Login</h1>
                     <p>Sign in to manage students</p>
                 </div>
 
                 <form onSubmit={handleLogin}>
-                    {/* Display error message */}
                     {error && <p className="error-message" style={{ color: 'red', textAlign: 'center' }}>{error}</p>}
 
                     <div className="form-group">

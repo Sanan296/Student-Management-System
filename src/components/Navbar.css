@@ -58,8 +58,8 @@
   transition: width 0.3s ease;
 }
 
-.nav-menu li a:hover::after,
-.nav-menu li a.active::after {
+.nav-menu li a:hover::after,.nav-menu li a.active::after
+ {
   width: 100%;
 }
 
@@ -98,33 +98,30 @@
   transition: all 0.3s ease;
 }
 
-/* When the link is active (if user is on login page) */
-.nav-btn.active {
+.nav-btn.active
+{
   background: #ffffff;
   color: #007bff;
 }
-
-/* Hover effect */
-.nav-btn:hover {
+.nav-btn:hover
+{
   background: #0056b3;
   color: #fff;
   transform: translateY(-2px);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
 }
 
-/* Fix underline on links */
-.nav-btn:link,
-.nav-btn:visited {
+.nav-btn:link,.nav-btn:visited
+{
   text-decoration: none;
 }
-
-/* Optional: Adjust spacing in nav list */
-.nav-menu li:last-child {
+.nav-menu li:last-child
+{
   margin-left: 1rem;
 }
 
-.nav-btn:hover,
-.logout-btn {
+.nav-btn:hover,.logout-btn
+{
   background: #560303;
   color: white;
   border: none;
@@ -133,10 +130,109 @@
   cursor: pointer;
   transition: background 0.3s;
 }
-
-.logout-btn:hover {
+.logout-btn:hover
+{
   background: #f71111;
 }
-#ms{
+#ms
+{
   color: #ffeb3b;
 }
+/* Navbar CSS: Dark Mode Navbar and Toggle Switch Styles */
+
+/* 1. Navbar style in dark mode */
+.navbar.dark-mode-nav {
+ background: linear-gradient(135deg, #1f2a38 0%, #0c1521 100%);
+ box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+}
+
+.navbar.dark-mode-nav .nav-menu li a::after {
+ background: var(--secondary);
+}
+
+.navbar.dark-mode-nav .nav-btn {
+ background: var(--secondary);
+ color: #1f2a38;
+}
+
+.navbar.dark-mode-nav .nav-btn:hover {
+ background: #ffffff;
+ color: #1f2a38;
+}
+
+/* 2. Toggle Switch Styles */
+.theme-switch-wrapper {
+ display: flex;
+ align-items: center;
+ margin-right: 1rem; 
+}
+
+.theme-switch {
+ display: inline-block;
+ height: 24px;
+ width: 48px;
+ position: relative;
+}
+
+.theme-switch input {
+ display: none;
+}
+
+.slider {
+ background-color: #ccc;
+ position: absolute;
+ cursor: pointer;
+ top: 0;
+ left: 0;
+ right: 0;
+ bottom: 0;
+ transition: 0.4s;
+ border-radius: 34px;
+ display: flex;
+ align-items: center;
+ justify-content: space-around; /* Distributes items */
+ padding: 0 4px; /* Small padding inside slider */
+}
+
+.slider:before {
+ content:none;
+}
+/* New styles for the sun and moon icons within the slider */
+.slider .icon {
+ font-size: 14px; /* Adjust size as needed */
+ line-height: 1; /* Ensure proper alignment */
+ transition: opacity 0.3s ease, transform 0.3s ease;
+}
+.slider .icon.sun {
+ color: #ffeb3b; /* Sun color */
+ opacity: 1; /* Visible by default (light mode) */
+ transform: translateX(0);
+}
+
+.slider .icon.moon {
+ color: #f0f0f0; /* Moon color */
+ opacity: 0; /* Hidden by default (light mode) */
+ transform: translateX(-10px); /* Slightly off-set */
+}
+
+input:checked + .slider {
+ background-color: var(--secondary);
+}
+
+/* input:checked + .slider:before {
+ transform: translateX(24px);
+} */
+/* When checkbox is checked (dark mode) */
+input:checked + .slider {
+ background-color: var(--secondary); /* Or a dark blue */
+}
+
+input:checked + .slider .icon.sun {
+ opacity: 0; /* Hide sun */
+ transform: translateX(10px); /* Move off-set */
+}
+
+input:checked + .slider .icon.moon {
+ opacity: 1; /* Show moon */
+ transform: translateX(0); /* Move into position */
+} 

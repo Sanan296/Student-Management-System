@@ -1,8 +1,7 @@
-// Footer.jsx
 import React from 'react';
 import './Footer.css';
 
-export default function Footer() {
+const Footer = () =>{
   return (
     <footer className="footer">
       <div className="footer-container">
@@ -13,8 +12,8 @@ export default function Footer() {
           </div>
           <div className="footer-section">
             <h4>Contact</h4>
-            <p>Email: info@studentms.com</p>
-            <p>Phone: +1 234 567 8900</p>
+            <p>Email: Sanantahir29@gmail.com</p>
+            <p>Phone: 03114926966</p>
           </div>
         </div>
         <div className="footer-bottom">
@@ -24,3 +23,4 @@ export default function Footer() {
     </footer>
   );
 }
+export default Footer;

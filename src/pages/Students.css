@@ -5,20 +5,21 @@
   font-family: "Poppins", sans-serif;
 }
 
-.students-container h2 {
+.students-container h2
+{
   color: #007bff;
   margin-bottom: 2rem;
 }
 
-/* Grid */
-.students-grid {
+.students-grid 
+{
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 1.5rem;
 }
 
-/* Card */
-.student-card {
+.student-card 
+{
   background: #ffffff;
   border-radius: 20px;
   box-shadow: 0 8px 20px rgba(0, 123, 255, 0.1);
@@ -28,13 +29,14 @@
   text-align: left;
 }
 
-.student-card:hover {
+.student-card:hover
+{
   transform: translateY(-4px);
   box-shadow: 0 10px 25px rgba(0, 123, 255, 0.2);
 }
 
-/* Avatar */
-.student-avatar {
+.student-avatar 
+{
   width: 65px;
   height: 65px;
   border-radius: 50%;
@@ -49,7 +51,8 @@
   box-shadow: 0 3px 8px rgba(0, 123, 255, 0.3);
 }
 
-.student-name {
+.student-name 
+{
   color: #007bff;
   font-size: 1.3rem;
   font-weight: 600;
@@ -57,33 +60,36 @@
   margin-bottom: 1rem;
 }
 
-.student-info {
+.student-info 
+{
   padding: 0.5rem 1rem;
   background: #f8fbff;
   border-radius: 10px;
   margin-bottom: 1.2rem;
 }
 
-.student-info p {
+.student-info p 
+{
   font-size: 0.95rem;
   margin: 0.4rem 0;
   color: #333;
 }
 
-.icon {
+.icon 
+{
   color: #007bff;
   margin-right: 5px;
 }
 
-/* Buttons */
-.card-buttons {
+.card-buttons 
+{
   display: flex;
   justify-content: center;
   gap: 1rem;
 }
 
-.btn-edit,
-.btn-delete {
+.btn-edit,.btn-delete 
+{
   border: none;
   padding: 0.5rem 1.2rem;
   border-radius: 20px;
@@ -94,38 +100,44 @@
   font-size: 0.9rem;
 }
 
-.btn-edit {
+.btn-edit 
+{
   background: #ffc107;
   color: #222;
 }
 
-.btn-delete {
+.btn-delete 
+{
   background: #dc3545;
 }
 
-.btn-edit:hover {
+.btn-edit:hover 
+{
   background: #e0a800;
 }
 
-.btn-delete:hover {
+.btn-delete:hover 
+{
   background: #b30000;
 }
 
-/* Edit mode */
-.edit-section {
+.edit-section 
+{
   background: #f9fcff;
   border-radius: 12px;
   padding: 1rem;
   box-shadow: inset 0 0 10px rgba(0, 123, 255, 0.1);
 }
 
-.edit-section h4 {
+.edit-section h4 
+{
   color: #007bff;
   margin-bottom: 0.5rem;
   text-align: center;
 }
 
-.edit-section input {
+.edit-section input 
+{
   width: 100%;
   margin: 0.4rem 0;
   padding: 0.6rem;
@@ -135,18 +147,21 @@
   outline: none;
 }
 
-.edit-section input:focus {
+.edit-section input:focus 
+{
   border-color: #007bff;
   box-shadow: 0 0 3px rgba(0, 123, 255, 0.4);
 }
 
-.edit-buttons {
+.edit-buttons 
+{
   display: flex;
   justify-content: space-between;
   margin-top: 0.8rem;
 }
 
-.cancel-btn {
+.cancel-btn 
+{
   background: #6c757d;
   color: white;
   border: none;
@@ -155,7 +170,8 @@
   cursor: pointer;
 }
 
-.save-btn {
+.save-btn 
+{
   background: #28a745;
   color: white;
   border: none;
@@ -164,17 +180,63 @@
   cursor: pointer;
 }
 
-.cancel-btn:hover {
+.cancel-btn:hover 
+{
   background: #5a6268;
 }
 
-.save-btn:hover {
+.save-btn:hover 
+{
   background: #218838;
 }
 
-/* No data */
-.no-data {
+.no-data 
+{
   color: #777;
   font-style: italic;
   margin-top: 2rem;
+}
+.dark-mode .students-container h2 {
+    color: var(--primary); 
+}
+.dark-mode .student-card {
+    background: var(--component-bg, #2c3e50); 
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.dark-mode .student-card:hover {
+    box-shadow: 0 10px 25px rgba(121, 166, 254, 0.25); 
+}
+.dark-mode .student-name {
+    color: var(--primary); 
+}
+
+.dark-mode .student-info {
+    background: #1f2a38; 
+}
+.dark-mode .student-info p {
+    color: var(--text-light, #bdbdbd); 
+}
+.dark-mode .edit-section {
+    background: #1f2a38;
+    box-shadow: inset 0 0 10px rgba(121, 166, 254, 0.1); 
+}
+.dark-mode .edit-section h4 {
+    color: var(--primary);
+}
+.dark-mode .edit-section input {
+    background: var(--component-bg, #2c3e50);
+    border: 1px solid var(--component-border, #445464);
+    color: var(--text-dark);
+}
+
+.dark-mode .edit-section input:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 3px rgba(121, 166, 254, 0.4);
+}
+.dark-mode .icon {
+    color: var(--primary); 
+}
+.dark-mode .no-data {
+    color: var(--text-light);
 }

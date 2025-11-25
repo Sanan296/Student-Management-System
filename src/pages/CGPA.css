@@ -1,4 +1,5 @@
-.cgpa-page {
+.cgpa-page 
+{
   max-width: 700px;
   margin: 2rem auto;
   background: white;
@@ -9,22 +10,26 @@
   font-family: 'Poppins', sans-serif;
 }
 
-.cgpa-page h2 {
+.cgpa-page h2
+{
   color: #007bff;
   margin-bottom: 0.5rem;
   font-size: 1.8rem;
 }
 
-.cgpa-page p {
+.cgpa-page p
+{
   color: #5a6c7d;
   margin-bottom: 1.5rem;
 }
 
-.subjects-list {
+.subjects-list
+{
   margin-bottom: 1.5rem;
 }
 
-.subject-row {
+.subject-row
+ {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -33,13 +38,15 @@
   flex-wrap: wrap;
 }
 
-.subject-row label {
+.subject-row label
+{
   font-weight: 600;
   color: #333;
   min-width: 90px;
 }
 
-.subject-row select {
+.subject-row select
+ {
   padding: 0.6rem;
   border-radius: 8px;
   border: 1px solid #ccc;
@@ -48,12 +55,14 @@
   transition: border 0.2s ease;
 }
 
-.subject-row select:focus {
+.subject-row select:focus
+{
   border-color: #007bff;
   box-shadow: 0 0 3px rgba(0, 123, 255, 0.4);
 }
 
-.remove-btn {
+.remove-btn 
+{
   background: #f44336;
   color: white;
   border: none;
@@ -64,19 +73,21 @@
   transition: background 0.3s ease;
 }
 
-.remove-btn:hover {
+.remove-btn:hover
+{
   background: #f71111;
 }
 
-/* Buttons below */
-.cgpa-buttons {
+.cgpa-buttons
+ {
   display: flex;
   justify-content: center;
   gap: 1rem;
   flex-wrap: wrap;
 }
 
-.btn-primary {
+.btn-primary
+ {
   background: linear-gradient(135deg, #007bff, #00bcd4);
   color: white;
   border: none;
@@ -87,13 +98,15 @@
   transition: all 0.3s ease;
 }
 
-.btn-primary:hover {
+.btn-primary:hover
+ {
   transform: translateY(-2px);
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
 
-/* Result box */
-.cgpa-result {
+
+.cgpa-result
+ {
   margin-top: 2rem;
   background: linear-gradient(135deg, #007bff, #00bcd4);
   color: white;
@@ -104,10 +117,8 @@
   display: inline-block;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
-/* Existing styles remain same — just add this section at bottom */
-
-/* Red Reset Button */
-.btn-danger {
+.btn-danger
+ {
   background: #f44336;
   color: white;
   border: none;
@@ -118,31 +129,36 @@
   transition: all 0.3s ease;
 }
 
-.btn-danger:hover {
+.btn-danger:hover
+ {
   background: #f71111;
   transform: translateY(-2px);
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
-.subject-row {
+.subject-row
+ {
   display: flex;
   gap: 10px;
   align-items: center;
   margin-bottom: 10px;
 }
 
-.subject-name-input {
+.subject-name-input
+ {
   flex: 1;
   padding: 8px;
   border: 1px solid #ccc;
   border-radius: 6px;
 }
 
-.subject-grade-select {
+.subject-grade-select
+ {
   padding: 8px;
   border-radius: 6px;
 }
 
-.remove-btn {
+.remove-btn
+ {
   background-color: #ff5c5c;
   color: white;
   border: none;
@@ -151,12 +167,14 @@
   cursor: pointer;
 }
 
-.remove-btn:disabled {
+.remove-btn:disabled
+ {
   opacity: 0.5;
   cursor: not-allowed;
 }
 
-.btn-primary {
+.btn-primary
+ {
   background-color: #007bff;
   color: white;
   border: none;
@@ -166,7 +184,8 @@
   margin-right: 5px;
 }
 
-.btn-danger {
+.btn-danger
+ {
   background-color: #dc3545;
   color: white;
   border: none;
@@ -175,39 +194,44 @@
   cursor: pointer;
 }
 
-.cgpa-result {
+.cgpa-result
+ {
   margin-top: 20px;
   font-weight: bold;
   color: #007bff;
 }
-.subject-row {
+.subject-row
+{
   display: flex;
   gap: 10px;
   align-items: center;
   margin-bottom: 12px;
 }
 
-.subject-input,
-.credit-input,
-.subject-select {
+.subject-input,.credit-input,.subject-select
+{
   padding: 8px;
   border: 1px solid #ccc;
   border-radius: 6px;
 }
 
-.subject-input {
+.subject-input
+{
   flex: 1.5;
 }
 
-.subject-select {
+.subject-select
+{
   flex: 1;
 }
 
-.credit-input {
+.credit-input
+{
   width: 100px;
 }
 
-.remove-btn {
+.remove-btn
+{
   background-color: #ed7a7a;
   color: white;
   border: none;
@@ -215,16 +239,19 @@
   border-radius: 6px;
   cursor: pointer;
 }
-.remove-btn:hover{
+.remove-btn:hover
+{
   background-color: #f71111;
 }
 
-.remove-btn:disabled {
+.remove-btn:disabled
+{
   opacity: 0.5;
   cursor: not-allowed;
 }
 
-.btn-primary {
+.btn-primary
+{
   background-color: #007bff;
   color: white;
   border: none;
@@ -234,18 +261,58 @@
   margin-right: 5px;
 }
 
-.btn-danger {
+.btn-danger
+{
   background-color: #dc3545;
   color: white;
   border: none;
   padding: 8px 15px;
   border-radius: 6px;
-  cursor: pointer;
-  
+  cursor: pointer;  
 }
 
-.cgpa-result {
+.cgpa-result 
+{
   margin-top: 20px;
   font-weight: bold;
   color: whitesmoke;
+}
+.dark-mode .cgpa-page {
+    background: var(--component-bg, #2c3e50);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+}
+
+.dark-mode .cgpa-page h2 {
+    color: var(--primary);
+}
+
+.dark-mode .cgpa-page p {
+    color: var(--text-light, #bdbdbd);
+}
+.dark-mode .subject-row label {
+    color: var(--text-dark); 
+}
+.dark-mode .subject-input,
+.dark-mode .credit-input,
+.dark-mode .subject-select,
+.dark-mode .subject-row select {
+    background: #1f2a38; 
+    border: 1px solid var(--component-border, #445464);
+    color: var(--text-dark);
+}
+
+.dark-mode .subject-row select:focus,
+.dark-mode .subject-input:focus,
+.dark-mode .credit-input:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 3px rgba(121, 166, 254, 0.4);
+}
+.dark-mode .cgpa-result {
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+}
+.dark-mode .remove-btn {
+    background-color: #dc3545;
+}
+.dark-mode .remove-btn:hover {
+    background-color: #b30000;
 }

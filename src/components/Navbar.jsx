@@ -2,13 +2,45 @@ import React, { useState, useEffect } from "react";
 import { NavLink, useNavigate } from "react-router-dom";
 import "./Navbar.css";
 
-export default function Navbar() {
+const Navbar =() =>{
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [loggedIn, setLoggedIn] = useState(
     localStorage.getItem("loggedIn") === "true"
   );
 
   const navigate = useNavigate();
+  // --- START Changes for Dark Mode ---
+ const [isDarkMode, setIsDarkMode] = useState(
+  localStorage.getItem("theme") === "dark"
+ );
+ const handleThemeToggle = () => {
+ const newMode = !isDarkMode;
+  setIsDarkMode(newMode);
+  
+  // Save preference to localStorage
+  localStorage.setItem("theme", newMode ? "dark" : "light"); 
+  // Apply the class to the body element
+  document.body.classList.toggle("dark-mode", newMode);
+ };
+
+ // Combine/Update your existing useEffect
+ useEffect(() => {
+  // Apply initial theme class on component mount
+  if (isDarkMode) {
+   document.body.classList.add("dark-mode");
+  } else {
+   document.body.classList.remove("dark-mode");
+  }
+
+  const handleStorageChange = () => {
+   setLoggedIn(localStorage.getItem("loggedIn") === "true");
+ };
+
+ window.addEventListener("storage", handleStorageChange);
+  return () => window.removeEventListener("storage", handleStorageChange);
+ }, [isDarkMode]); // Dependency added for isDarkMode
+
+ // --- END Changes for Dark Mode ---
 
   const handleClick = () => setMobileMenuOpen(false);
 
@@ -19,7 +51,6 @@ export default function Navbar() {
   };
 
   useEffect(() => {
-    // This makes sure Navbar updates if login state changes elsewhere
     const handleStorageChange = () => {
       setLoggedIn(localStorage.getItem("loggedIn") === "true");
     };
@@ -29,7 +60,7 @@ export default function Navbar() {
   }, []);
 
   return (
-    <nav className="navbar">
+    <nav className={`navbar ${isDarkMode ? "dark-mode-nav" : ""}`}>
       <div className="nav-container">
         <div className="nav-brand">
             <span className="brand-icon">🎓</span> Student<span id='ms'>MS</span>
@@ -76,8 +107,22 @@ export default function Navbar() {
               About
             </NavLink>
           </li>
-
-          
+          {/* Dark Mode Toggle Integration */}
+     <li className="theme-switch-wrapper">
+      <label className="theme-switch" htmlFor="checkbox">
+       <input 
+        type="checkbox" 
+        id="checkbox" 
+        checked={isDarkMode} 
+        onChange={handleThemeToggle} 
+       />
+        <div className="slider">
+                  <span className="icon sun">☀️</span> {/* Sun Icon */}
+                  <span className="icon moon">🌙</span> {/* Moon Icon */}
+              </div> {/* <-- UPDATED LINE */}
+      </label>
+     </li>
+         
       <button
         className="logout-btn"
         onClick={() => {
@@ -92,3 +137,4 @@ export default function Navbar() {
     </nav>
   );
 }
+export default Navbar;

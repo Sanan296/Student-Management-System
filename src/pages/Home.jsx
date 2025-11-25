@@ -1,7 +1,7 @@
 import React from 'react';
 import './Home.css';
 
-const Home= ({})=> {
+const Home= ()=> {
   return (
     <div className="home-page">
       <section className="hero-section">
@@ -22,9 +22,9 @@ const Home= ({})=> {
             <p>Easily manage student records, enrollment, and personal information.</p>
           </div>
           <div className="feature-card">
-            <div className="feature-icon">📚</div>
-            <h3>Subject Tracking</h3>
-            <p>Monitor courses, subjects, and academic progress efficiently.</p>
+            <div className="feature-icon">🧭</div>
+            <h3>Academic Road Map</h3>
+            <p>Visualize and track the semester-by-semester course plan for your degree.</p>
           </div>
           <div className="feature-card">
             <div className="feature-icon">📊</div>

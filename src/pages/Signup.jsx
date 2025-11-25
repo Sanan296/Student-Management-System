@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import "./auth.css";
 
-// Define the API Base URL
 const API_BASE_URL = "http://localhost:5000/api"; 
 
 const Signup = () => {
@@ -20,7 +19,6 @@ const Signup = () => {
         setFormData({ ...formData, [e.target.name]: e.target.value });
     };
 
-    // 🔄 API-Integrated handleSignup
     const handleSignup = async (e) => {
         e.preventDefault();
         setError(null);
@@ -33,14 +31,12 @@ const Signup = () => {
         setLoading(true);
 
         try {
-            // Send POST request to the unique admin signup endpoint
             const response = await fetch(`${API_BASE_URL}/admin/signup`, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
                 },
                 body: JSON.stringify({
-                    // Backend expects 'username' (we use email for this) and 'password'
                     username: formData.email, 
                     password: formData.password,
                 }),
@@ -48,8 +44,8 @@ const Signup = () => {
 
             const result = await response.json();
 
-            if (!response.ok) {
-                // This captures the crucial backend message: "Admin already exists! Please log in instead."
+            if (!response.ok) 
+            {
                 throw new Error(result.message || "Signup failed due to a server error.");
             }
 
@@ -73,7 +69,6 @@ const Signup = () => {
                 </div>
 
                 <form onSubmit={handleSignup}>
-                    {/* Display error message */}
                     {error && <p className="error-message" style={{ color: 'red', textAlign: 'center' }}>{error}</p>}
                     
                     <div className="form-group">
